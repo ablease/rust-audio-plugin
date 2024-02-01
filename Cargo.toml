@@ -2,7 +2,12 @@
 name = "rust-audio-plugin"
 version = "0.1.0"
 edition = "2021"
+authors = ["Alex Blease <alexblease@gmail.com>"]
 
-# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[lib]
+crate-type = ["cdylib"]
 
 [dependencies]
+nih_plug = { path = "../nih-plug/", features = ["assert_process_allocs"] }
+
